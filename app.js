@@ -18,15 +18,17 @@ var storePike = {
     }
   },
   writeToPage: function () {
-    var parent = document.getElementById('pike');//where we put our child element
-    var child = document.createElement('li');//what we add to the parent element, in this case a <li> element with....
+    var parent = document.getElementById('pike');
+    var childTotal = document.createElement('li');
+
     for (var j = 0; j < this.hours.length; j++) {
-      child.textContent = this.hours[j] + ': ' + this.output[j];//adding the hours and totals per hour
-      parent.appendChild(child);//now add the <li>text elements succesively to the parent element
+      var child = document.createElement('li');
+      child.textContent = this.hours[j] + ': ' + this.output[j];
+      parent.appendChild(child);
     }
-    child.textContent = 'TOTAL: ' + this.totalSales;//adding the daily total at the end
-    parent.appendChild(child);
-  }
+    childTotal.textContent = 'TOTAL: ' + this.totalSales;
+    child.appendChild(childTotal);
+  },
 
 };
 storePike.salesPerHour();//need to call functions for them to run
@@ -51,13 +53,17 @@ var storeSeaTac = {
     }
   },
   writeToPage: function () {
+    var parent = document.getElementById('seatac');
+    var childTotal = document.createElement('li');
+
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('seatac');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
     }
-  }
+    childTotal.textContent = 'TOTAL: ' + this.totalSales;
+    child.appendChild(childTotal);
+  },
 
 };
 storeSeaTac.salesPerHour();
@@ -82,13 +88,17 @@ var storeSeaCent = {
     }
   },
   writeToPage: function () {
+    var parent = document.getElementById('seacent');
+    var childTotal = document.createElement('li');
+
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('seacent');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
     }
-  }
+    childTotal.textContent = 'TOTAL: ' + this.totalSales;
+    child.appendChild(childTotal);
+  },
 };
 storeSeaCent.salesPerHour();
 storeSeaCent.writeToPage();
@@ -112,13 +122,17 @@ var storeCapHill = {
     }
   },
   writeToPage: function () {
+    var parent = document.getElementById('caphill');
+    var childTotal = document.createElement('li');
+
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('caphill');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
     }
-  }
+    childTotal.textContent = 'TOTAL: ' + this.totalSales;
+    child.appendChild(childTotal);
+  },
 };
 storeCapHill.salesPerHour();
 storeCapHill.writeToPage();
@@ -142,13 +156,17 @@ var storeAlki = {
     }
   },
   writeToPage: function () {
+    var parent = document.getElementById('alki');
+    var childTotal = document.createElement('li');
+
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('alki');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
     }
-  }
+    childTotal.textContent = 'TOTAL: ' + this.totalSales;
+    child.appendChild(childTotal);
+  },
 };
 storeAlki.salesPerHour();
 storeAlki.writeToPage();

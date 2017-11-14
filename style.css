@@ -1,0 +1,26 @@
+*  {
+  font-family: 'Helvetica', sans-serif;
+  color: grey;
+}
+
+header {
+  font-family: 'Martel', serif;
+  font-weight: bold;
+  color: white;
+}
+
+h1 {
+  font-family: Avenir, serif;
+  color: #FF8B31;
+
+}
+
+h2 {
+  font-family: Avenir, serif;
+  color: #FF8B31;
+}
+
+h3 {
+  font-family: Avenir, serif;
+  color: #FF8B31;
+}
