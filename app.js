@@ -2,7 +2,7 @@ var storePike = {
   min: 23,
   max: 65,
   avgCookie: 6.3,
-  hours:[6,7,8,9,10,11,12,1,2,3,4,5,6,7,8],
+  hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
   },
@@ -15,7 +15,35 @@ var storePike = {
     return output;
   },
 
+  writeToPage: function () {
+    for (var j = 0; j < this.hours.length; j++) {
+      var parent = document.getElementById('parent');
+      var child = document.createElement('li');
+      child.textContent = this.hours[j];
+      parent.appendChild(child);
+    }
+  }
 };
+
+
+
+/*document.body.onload = addElement;
+
+function addElement () {
+  // create a new div element
+  // and give it some content
+  var newDiv = document.createElement("div");
+  var newContent = document.createTextNode("Hi there and greetings!");
+  newDiv.appendChild(newContent); //add the text node to the newly created div.
+
+  // add the newly created element and its content into the DOM
+  var currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv); */
+
+
+
+
+
 
 var storeSeaTac = {
   minCust: 3,
