@@ -16,7 +16,7 @@ var storePike = {
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('parent');
+      var parent = document.getElementById('pike');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
@@ -45,7 +45,7 @@ var storeSeaTac = {
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('parent');
+      var parent = document.getElementById('seatac');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
@@ -74,7 +74,7 @@ var storeSeaCent = {
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('parent');
+      var parent = document.getElementById('seacent');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
@@ -102,7 +102,7 @@ var storeCapHill = {
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('parent');
+      var parent = document.getElementById('caphill');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
@@ -130,7 +130,7 @@ var storeAlki = {
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('parent');
+      var parent = document.getElementById('alki');
       var child = document.createElement('li');
       child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
