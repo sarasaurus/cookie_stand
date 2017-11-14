@@ -7,17 +7,25 @@ header {
   font-family: 'Martel', serif;
   font-weight: bold;
   color: white;
+  background-color: #00A4BA;
 }
-
+article {
+  background-color: white;
+}
+section {
+  background-color: #FF8B31;
+}
 h1 {
   font-family: Avenir, serif;
   color: #FF8B31;
+  background-color: #727272;
 
 }
 
 h2 {
   font-family: Avenir, serif;
   color: #FF8B31;
+  background-color: #727272;
 }
 
 h3 {
