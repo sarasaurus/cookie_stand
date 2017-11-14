@@ -4,7 +4,9 @@ var storePike = {
   avgCookie: 6.3,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
-//the below doesn't work but I don't know why
+  total: 0,
+
+//the below doesn't work but I don't know why another idea is to use push
   /*total: output.reduce( function(total, amount){
     return total + amount
   }),*/
