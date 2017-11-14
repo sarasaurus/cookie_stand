@@ -1,25 +1,38 @@
 'use strict';
+//global variables
+var hours = ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
+var output = [];
+var totalSales = 0;
+var stores = [];
+
 //store object
-function Store (name, min, max, avgCookie) {
-  this.name = name;
+function Store (location, min, max, avgCookie) {
+  this.name = location;
   this.min = min;
   this.max = max;
   this.avgCookie = avgCookie;
+}
+//populating storeLocations
+
+
+//METHODS
+Store.custPerHour = function () {
+  return Math.random() * (this.max - this.min) + this.min;
 };
 
-//Methods
-var custPerHour = function () {
-  return Math.random() * (max - min) + min;
+Store.prototype.outputProduct = function () {
+  Math.round (this.avgCookie * custPerHour());
 };
-var salesPerHour = function () {
-  for (var i = 0; i <= this.hours.length; i++) {
-    var outputProduct = Math.round (this.avgCookie * this.custPerHour());
-    //console.log('outputProduct: ', outputProduct);
-    this.output.push (outputProduct);//pushing product to the array 'output'
-    this.totalSales += outputProduct;
+
+Store.prototype.salesPerHour = function () {
+  for (var i = 0; i <= hours.length; i++) {
+    output.push (outputProduct);//pushing product to the array 'output'
+    totalSales += outputProduct;
+}
 };
-var writeToPage = function () {
-  var parent = document.getElementById('pike');
+/*
+Store.prototype.writeToPage = function () {
+  var parent = document.getElementById('location');
   var childTotal = document.createElement('li');
 
   for (var j = 0; j < this.hours.length; j++) {
@@ -29,11 +42,5 @@ var writeToPage = function () {
   }
   childTotal.textContent = 'TOTAL: ' + this.totalSales;
   child.appendChild(childTotal);
-},
-
-
-//create proptoype functions
-
-Store.prototype.custPerHour ();
-
-//CODE FROM MONDAY
+};
+store.*/
