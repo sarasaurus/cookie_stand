@@ -1,6 +1,7 @@
 var storePike = {
   min: 23,
   max: 65,
+  output: [],
   avgCookie: 6.3,
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
@@ -8,23 +9,24 @@ var storePike = {
   },
   salesPerHour: function () {
     //console.log(this.avgCookie);
-    var output = [];
     for (var i = 0; i <= this.hours.length; i++) {
-      output.push (Math.round (this.avgCookie * this.custPerHour()));
+      this.output.push (Math.round (this.avgCookie * this.custPerHour()));
     }
-    return output;
   },
 
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
       var parent = document.getElementById('parent');
       var child = document.createElement('li');
-      child.textContent = this.hours[j];
+      child.textContent = this.hours[j] + ': ' + this.output[j];
       parent.appendChild(child);
     }
   }
+
 };
 
+storePike.salesPerHour();
+storePike.writeToPage();
 
 
 /*document.body.onload = addElement;
