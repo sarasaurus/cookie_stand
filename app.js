@@ -5,7 +5,7 @@ var stores = [];
 
 //store object
 function Store (location, min, max, avgSales) {
-  this.name = location;
+  this.location = location;
   this.min = min;
   this.max = max;
   this.avgSales = avgSales;
@@ -40,17 +40,26 @@ Store.prototype.salesPerHour = function () {
     this.totalSales += this.dailySales;
 }
 };
-/*
-Store.prototype.writeToPage = function () {
-  var parent = document.getElementById('location');
-  var childTotal = document.createElement('li');
 
-  for (var j = 0; j < this.hours.length; j++) {
-    var child = document.createElement('li');
-    child.textContent = this.hours[j] + ': ' + this.hourlySales[j];
-    parent.appendChild(child);
+Store.prototype.writeToPage = function () {
+
+  var tblEl = document.getElementById('tbody');
+  var thEl = document.createElement('th');
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+
+  for (var i = 0; i < stores.length; i++) {
+    trEl.textContent = this.location;
+    trEl.appendChild(tblEl);
   }
-  childTotal.textContent = 'TOTAL: ' + this.totalSales;
-  child.appendChild(childTotal);
+
+  for (var j = 0; j < hours.length; j++) {
+    thEl.textContent = hours[j];
+    thEl.appendChild(trEl);
+  }
+
+
+  tdEl.textContent = 'TOTAL: ' + this.totalSales;
+  tdEl.appendChild(tdEl);
 };
-store.*/
+store.
