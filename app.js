@@ -1,8 +1,8 @@
 var storePike = {
   min: 23,
   max: 65,
-  output: [],
   avgCookie: 6.3,
+  output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
@@ -28,10 +28,10 @@ storePike.salesPerHour();
 storePike.writeToPage();
 
 var storeSeaTac = {
-  min: 23,
-  max: 65,
+  min: 3,
+  max: 24,
+  avgCookie: 1.2,
   output: [],
-  avgCookie: 6.3,
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
@@ -57,10 +57,10 @@ storeSeaTac.salesPerHour();
 storeSeaTac.writeToPage();
 
 var storeSeaCent = {
-  min: 23,
-  max: 65,
+  min: 11,
+  max: 38,
+  avgCookie: 3.7,
   output: [],
-  avgCookie: 6.3,
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
@@ -85,10 +85,10 @@ storeSeaCent.salesPerHour();
 storeSeaCent.writeToPage();
 
 var storeCapHill = {
-  min: 23,
-  max: 65,
+  min: 20,
+  max: 38,
+  avgCookie: 2.3,
   output: [],
-  avgCookie: 6.3,
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
@@ -113,10 +113,10 @@ storeCapHill.salesPerHour();
 storeCapHill.writeToPage();
 
 var storeAlki = {
-  min: 23,
-  max: 65,
+  min: 2,
+  max: 16,
+  avgCookie: 4.6,
   output: [],
-  avgCookie: 6.3,
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
