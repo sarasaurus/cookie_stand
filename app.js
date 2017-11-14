@@ -4,32 +4,28 @@ var storePike = {
   avgCookie: 6.3,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
-  total: 0,
+  totalSales: 0,
 
   custPerHour: function getRandomArbitrary() {//getting random number of customers that vist per hour
     return Math.random() * (this.max - this.min) + this.min;
   },
   salesPerHour: function () {//multiplying the number of customers by the avg cookie sale/customer
-    //console.log(this.avgCookie);
     for (var i = 0; i <= this.hours.length; i++) {
-      this.output.push (Math.round (this.avgCookie * this.custPerHour()));//pushing product to the array 'output'
+      var outputProduct = Math.round (this.avgCookie * this.custPerHour());
+      //console.log('outputProduct: ', outputProduct);
+      this.output.push (outputProduct);//pushing product to the array 'output'
+      this.totalSales += outputProduct;
     }
   },
-  /*calcTotal: function () {
-    for (var i = 0; i <= this.hours.length; i++) {
-      this.output[i] += this.output[i];
-    }
-  },*/
-  total: output.reduce( function(total, amount){//trying to add up all places in output
-    return total + amount
-  }),
   writeToPage: function () {
+    var parent = document.getElementById('pike');//where we put our child element
+    var child = document.createElement('li');//what we add to the parent element, in this case a <li> element with....
     for (var j = 0; j < this.hours.length; j++) {
-      var parent = document.getElementById('pike');//where we put
-      var child = document.createElement('li');//what we add, a <li> element with....
-      child.textContent = this.hours[j] + ': ' + this.output[j];//this content
+      child.textContent = this.hours[j] + ': ' + this.output[j];//adding the hours and totals per hour
       parent.appendChild(child);//now add the <li>text elements succesively to the parent element
     }
+    child.textContent = 'TOTAL: ' + this.totalSales;//adding the daily total at the end
+    parent.appendChild(child);
   }
 
 };
@@ -42,16 +38,18 @@ var storeSeaTac = {
   avgCookie: 1.2,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
+  totalSales: 0,
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
   },
-  salesPerHour: function () {
-    //console.log(this.avgCookie);
+  salesPerHour: function () {//multiplying the number of customers by the avg cookie sale/customer
     for (var i = 0; i <= this.hours.length; i++) {
-      this.output.push (Math.round (this.avgCookie * this.custPerHour()));
+      var outputProduct = Math.round (this.avgCookie * this.custPerHour());
+      //console.log('outputProduct: ', outputProduct);
+      this.output.push (outputProduct);//pushing product to the array 'output'
+      this.totalSales += outputProduct;
     }
   },
-
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
       var parent = document.getElementById('seatac');
@@ -71,16 +69,18 @@ var storeSeaCent = {
   avgCookie: 3.7,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
+  totalSales: 0,
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
   },
-  salesPerHour: function () {
-    //console.log(this.avgCookie);
+  salesPerHour: function () {//multiplying the number of customers by the avg cookie sale/customer
     for (var i = 0; i <= this.hours.length; i++) {
-      this.output.push (Math.round (this.avgCookie * this.custPerHour()));
+      var outputProduct = Math.round (this.avgCookie * this.custPerHour());
+      //console.log('outputProduct: ', outputProduct);
+      this.output.push (outputProduct);//pushing product to the array 'output'
+      this.totalSales += outputProduct;
     }
   },
-
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
       var parent = document.getElementById('seacent');
@@ -99,16 +99,18 @@ var storeCapHill = {
   avgCookie: 2.3,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
+  totalSales: 0,
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
   },
-  salesPerHour: function () {
-    //console.log(this.avgCookie);
+  salesPerHour: function () {//multiplying the number of customers by the avg cookie sale/customer
     for (var i = 0; i <= this.hours.length; i++) {
-      this.output.push (Math.round (this.avgCookie * this.custPerHour()));
+      var outputProduct = Math.round (this.avgCookie * this.custPerHour());
+      //console.log('outputProduct: ', outputProduct);
+      this.output.push (outputProduct);//pushing product to the array 'output'
+      this.totalSales += outputProduct;
     }
   },
-
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
       var parent = document.getElementById('caphill');
@@ -127,16 +129,18 @@ var storeAlki = {
   avgCookie: 4.6,
   output: [],
   hours:['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'],
+  totalSales: 0,
   custPerHour: function getRandomArbitrary() {
     return Math.random() * (this.max - this.min) + this.min;
   },
-  salesPerHour: function () {
-    //console.log(this.avgCookie);
+  salesPerHour: function () {//multiplying the number of customers by the avg cookie sale/customer
     for (var i = 0; i <= this.hours.length; i++) {
-      this.output.push (Math.round (this.avgCookie * this.custPerHour()));
+      var outputProduct = Math.round (this.avgCookie * this.custPerHour());
+      //console.log('outputProduct: ', outputProduct);
+      this.output.push (outputProduct);//pushing product to the array 'output'
+      this.totalSales += outputProduct;
     }
   },
-
   writeToPage: function () {
     for (var j = 0; j < this.hours.length; j++) {
       var parent = document.getElementById('alki');
