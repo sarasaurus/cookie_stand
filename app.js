@@ -40,31 +40,27 @@ Store.prototype.salesPerHour = function () {
   }
 
 };
-
-for (var i = 0; i <= stores.length; i++) {
+//populating my store cards
+for (var i = 0; i < stores.length; i++) {
   stores[i].salesPerHour();
 }
 
 //WRITE TO PAGE
-Store.prototype.createRow = function () {
-  var tblEl = document.getElementById('hours-tbl');
-  var thEl = document.getElementById('t head')
-  var trEl = document.createElement('tr');
-  var tdEl = document.createElement('td')
-  tdEl.textContent = hours[i];
-  tblEl.appendChild(trEl).appendChild(tdEl);
+Store.prototype.printHours = function () {
+  for (var j = 0; j < hours.length; j++) {
+    var tblEl = document.getElementById('tbl-body');
+    var trEl = document.getElementById('tbl-row');
+    var thEl = document.createElement('th');
+    thEl.textContent = hours[j];
+    trEl.appendChild(thEl);
+    tblEl.appendChild(trEl);
+  }
 };
+Store.prototype.printHours();
 
-for (var j = 0; j <= hours.length; j++) {
-  hours[j].createRow();
-}
 
 /*for (var i = 0; i < stores.length; i++) {
   trEl.textContent = this.location;
   trEl.appendChild(tblEl);
 }
 */
-for (var j = 0; j < hours.length; j++) {
-  trEl.textContent = hours[j];
-  tblEl.appendChild(trEl);
-}
