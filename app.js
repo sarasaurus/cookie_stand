@@ -81,7 +81,7 @@ Store.prototype.printData = function () {
     var position = document.getElementsByTagName('tr')[j];
     for (var i = 0; i < hours.length; i++) {
       var tdEl = document.createElement('td');
-      tdEl.textContent = 'dummy';
+      tdEl.textContent = stores[j].hourlySales[i];
       position.appendChild(tdEl);
     }
   }
