@@ -32,3 +32,11 @@ h3 {
   font-family: Avenir, serif;
   color: #FF8B31;
 }
+td {
+  border: solid;
+  border-color: black;
+}
+tr {
+  border: solid;
+  border-color: black;
+}
