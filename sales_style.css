@@ -1,6 +1,23 @@
 * {
   font-family: 'courier', monospace;
   color: #002A2A;
-  
 
+}
+
+td {
+  border-right: solid;
+  border-bottom: solid;
+  border-color: black;
+}
+
+th {
+  border-right: solid;
+  border-bottom: solid;
+  border-color: black;
+}
+
+tr {
+  border-top: solid;
+  border-bottom: solid;
+  border-color: black;
 }
