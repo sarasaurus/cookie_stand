@@ -14,7 +14,7 @@ function Store (location, min, max, avgSales) {
   stores.push(this);
   console.log('what store: ', this);
 
-};
+}
 
 //Store Info
 new Store ('1st and Pike', 23, 65, 6.3);
@@ -45,7 +45,7 @@ Store.prototype.salesPerHour = function () {
 //populating my store cards
 for (var i = 0; i < stores.length; i++) {
   stores[i].salesPerHour();
-};
+}
 
 
 //WRITE TO PAGE
@@ -55,15 +55,18 @@ Store.prototype.printHours = function () {
     var thEl = document.createElement('th');
     thEl.textContent = hours[j];
     tblEl.appendChild(thEl);
-  };
+  }
+};
 Store.prototype.printHours();
 
 Store.prototype.printStores = function () {
-    var tblEl = document.getElementById('tbl-body');
-    var trEl = document.createElement('tr');
-    trEl.textContent = this.location;
-    tblEl.appendChild(trEl);
-    console.log('this location is: ', this.location);
-  };
+  var tblEl = document.getElementById('tbl-body');
+  var trEl = document.createElement('tr');
+  trEl.textContent = this.location;
+  tblEl.appendChild(trEl);
+  console.log('this location is: ', this.location);
+};
+
 for (var j = 0; j < stores.length; j++) {
-  stores[i].printStores();
+  stores[j].printStores();
+}
