@@ -3,21 +3,24 @@
   color: #002A2A;
 
 }
-
-td {
-  border-right: solid;
-  border-bottom: solid;
-  border-color: black;
+table {
+  width: 600px;
+}
+th, td {
+  padding: 7px 10px 10px 10px;
 }
 
 th {
-  border-right: solid;
-  border-bottom: solid;
-  border-color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 90%;
+  border-bottom: 2px solid #111111;
+  border-top: 1 px solid #999;
+  text-align: left;
 }
-
+td.highlight {
+  background-color: yellow;
+}
 tr {
-  border-top: solid;
-  border-bottom: solid;
-  border-color: black;
+  background-color: #efefef;
 }
