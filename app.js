@@ -70,3 +70,14 @@ Store.prototype.printStores = function () {
 for (var j = 0; j < stores.length; j++) {
   stores[j].printStores();
 }
+Store.prototype.printData = function () {
+  for (var j = 0; j < hours.length; j++) {
+    var thEl = document.getElementsByTagName('th');
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.hourlySales;
+    thEl.appendChild(tdEl);
+  }
+};
+Store.prototype.printData();
+
+//create a footer with totals
