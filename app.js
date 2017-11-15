@@ -75,13 +75,17 @@ Store.prototype.printStores = function () {
 for (var j = 0; j < stores.length; j++) {
   stores[j].printStores();
 }
+
 Store.prototype.printData = function () {
-  for (var j = 0; j < hours.length; j++) {
-    var thEl = document.getElementsByTagName('th');
-    var tdEl = document.createElement('td');
-    tdEl.textContent = this.hourlySales;
-    thEl.appendChild(tdEl);
+  for (var j = 0; j < stores.length; j++) {
+    var position = document.getElementsByTagName('tr')[j];
+    for (var i = 0; i < hours.length; i++) {
+      var tdEl = document.createElement('td');
+      tdEl.textContent = 'dummy';
+      position.appendChild(tdEl);
+    }
   }
+
 };
 Store.prototype.printData();
 
