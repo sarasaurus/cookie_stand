@@ -50,6 +50,10 @@ for (var i = 0; i < stores.length; i++) {
 
 //WRITE TO PAGE
 Store.prototype.printHours = function () {
+  var firstTblEl = document.getElementById('tbl-body');
+  var firstEl = document.createElement('th');
+  firstEl.textContent = ' ';
+  firstTblEl.appendChild(firstEl);
   for (var j = 0; j < hours.length; j++) {
     var tblEl = document.getElementById('tbl-body');
     var thEl = document.createElement('th');
@@ -57,6 +61,7 @@ Store.prototype.printHours = function () {
     tblEl.appendChild(thEl);
   }
 };
+
 Store.prototype.printHours();
 
 Store.prototype.printStores = function () {
