@@ -28,6 +28,7 @@ function onSubmit(event) {//event is a predefined function!
     avgCookie: parseInt(event.target.avgCookie.value, 10),
   };
   new Store (newStore.location, newStore.min, newStore.max, newStore.avgCookie);
+  stores[i].salesPerHour();
 }
 formEl.addEventListener('submit', onSubmit);
 
@@ -57,8 +58,62 @@ Store.prototype.salesPerHour = function () {
     this.totalSales += this.hourlySales[i];
   }
 };
-
-//populating my store cards, NO NEED?
+//populating my store cards
 for (var i = 0; i < stores.length; i++) {
   stores[i].salesPerHour();
 }
+//WRITE TO PAGE
+Store.prototype.printHours = function () {
+  var firstTblEl = document.getElementById('tbl-body');
+  var firstEl = document.createElement('th');
+  var lastEl = document.createElement('th');
+  firstEl.textContent = ' ';
+  lastEl.textContent = 'TOTAL';
+  firstTblEl.appendChild(firstEl);
+  for (var j = 0; j < hours.length; j++) {
+    var tblEl = document.getElementById('tbl-body');
+    var thEl = document.createElement('th');
+    thEl.textContent = hours[j];
+    tblEl.appendChild(thEl);
+  }
+  firstTblEl.appendChild(lastEl);
+};
+
+Store.prototype.printHours();
+
+Store.prototype.printStores = function () {
+  var tblEl = document.getElementById('tbl-body');
+  var trEl = document.createElement('tr');
+  trEl.textContent = this.location;
+  tblEl.appendChild(trEl);
+  console.log('this location is: ', this.location);
+};
+
+for (var j = 0; j < stores.length; j++) {
+  stores[j].printStores();
+}
+
+Store.prototype.printData = function () {
+  for (var j = 0; j < stores.length; j++) {
+    var position = document.getElementsByTagName('tr')[j];
+    for (var i = 0; i < hours.length; i++) {
+      var tdEl = document.createElement('td');
+      tdEl.textContent = stores[j].hourlySales[i];
+      position.appendChild(tdEl);
+    }
+  }
+
+};
+Store.prototype.printData();
+
+Store.prototype.printTotal = function () {
+  for (var j = 0; j < stores.length; j++) {
+    var position = document.getElementsByTagName('tr')[j];
+    var tdEl = document.createElement('td');
+    tdEl.textContent = stores[j].totalSales;
+    position.appendChild(tdEl);
+
+  }
+
+};
+Store.prototype.printTotal();
