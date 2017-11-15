@@ -103,3 +103,16 @@ Store.prototype.printTotal = function () {
 
 };
 Store.prototype.printTotal();
+
+//create a footer with totals
+Store.prototype.printFooter = function () {
+  for (var j = 0; j < stores.length; j++) {
+    var position = document.getElementsByTagName('tr')[j];
+    for (var i = 0; i < hours.length; i++) {
+      var tdEl = document.createElement('td');
+      tdEl.textContent = stores[j].hourlySales[i];//needs to get info from td at [1] and add together
+      position.appendChild(tdEl);
+    }
+  }
+
+};
