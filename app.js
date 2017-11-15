@@ -13,6 +13,7 @@ function Store (location, min, max, avgSales) {
   this.totalSales = 0;
   stores.push(this);
   console.log('what store: ', this);
+  //can also add a get.hourlySales<<< is that it?
 
 }
 
@@ -24,17 +25,17 @@ new Store ('Capitol Hill', 20, 38, 2.3);
 new Store ('Alki', 2, 16, 4.6);
 
 //METHODS
-//generate customer
-Store.prototype.randNum = function () {
+//generate customer, no need to couch in prototype cause is abstract
+function randNum () {
   return Math.random() * (this.max - this.min) + this.min;
-};
+}
 
 //create daily Sales
 Store.prototype.dailySales = function () {
-  return Math.round (this.avgSales * this.randNum());
+  return Math.round (this.avgSales * randNum());
+
 };
 
-//create hourly Sales
 Store.prototype.salesPerHour = function () {
   for (var i = 0; i <= hours.length; i++) {
     this.hourlySales.push (this.dailySales());//pushing product to the array 'hourlySales'
@@ -42,7 +43,7 @@ Store.prototype.salesPerHour = function () {
   }
 };
 
-//populating my store cards
+//populating my store cards, MUCH BETTER TO INCLUDE INSIDE construtor object
 for (var i = 0; i < stores.length; i++) {
   stores[i].salesPerHour();
 }
@@ -106,13 +107,12 @@ Store.prototype.printTotal();
 
 //create a footer with totals
 Store.prototype.printFooter = function () {
-  for (var j = 0; j < stores.length; j++) {
-    var position = document.getElementsByTagName('tr')[j];
-    for (var i = 0; i < hours.length; i++) {
-      var tdEl = document.createElement('td');
-      tdEl.textContent = stores[j].hourlySales[i];//needs to get info from td at [1] and add together
-      position.appendChild(tdEl);
-    }
+  for (var i = 0; i < hours.length; i++) {
+    var tblEl = document.getElementById('tbl-body');
+    var trEl = document.createElement('tr');
+    tblEl.textContent = stores[j].hourlySales[i];//needs to get info from td at [1] and add together
+    position.appendChild(trEl);
   }
+
 
 };
