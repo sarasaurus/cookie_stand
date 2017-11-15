@@ -5,10 +5,19 @@
 }
 
 td {
-  border: solid;
+  border-right: solid;
+  border-bottom: solid;
   border-color: black;
 }
+
+th {
+  border-right: solid;
+  border-bottom: solid;
+  border-color: black;
+}
+
 tr {
-  border: solid;
+  border-top: solid;
+  border-bottom: solid;
   border-color: black;
 }

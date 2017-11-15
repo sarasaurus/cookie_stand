@@ -60,6 +60,7 @@ Store.prototype.printHours = function () {
     thEl.textContent = hours[j];
     tblEl.appendChild(thEl);
   }
+
 };
 
 Store.prototype.printHours();
