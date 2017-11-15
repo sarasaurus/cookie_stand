@@ -52,7 +52,9 @@ for (var i = 0; i < stores.length; i++) {
 Store.prototype.printHours = function () {
   var firstTblEl = document.getElementById('tbl-body');
   var firstEl = document.createElement('th');
+  var lastEl = document.createElement('th');
   firstEl.textContent = ' ';
+  lastEl.textContent = 'TOTAL';
   firstTblEl.appendChild(firstEl);
   for (var j = 0; j < hours.length; j++) {
     var tblEl = document.getElementById('tbl-body');
@@ -60,7 +62,7 @@ Store.prototype.printHours = function () {
     thEl.textContent = hours[j];
     tblEl.appendChild(thEl);
   }
-
+  firstTblEl.appendChild(lastEl);
 };
 
 Store.prototype.printHours();
@@ -89,5 +91,18 @@ Store.prototype.printData = function () {
 
 };
 Store.prototype.printData();
+
+Store.prototype.printTotal = function () {
+  for (var j = 0; j < stores.length; j++) {
+    var position = document.getElementsByTagName('tr')[j];
+    var tdEl = document.createElement('td');
+    tdEl.textContent = stores[j].totalSales;
+    position.appendChild(tdEl);
+
+  }
+
+};
+Store.prototype.printTotal();
+
 
 //create a footer with totals
