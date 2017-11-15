@@ -103,6 +103,3 @@ Store.prototype.printTotal = function () {
 
 };
 Store.prototype.printTotal();
-
-
-//create a footer with totals
