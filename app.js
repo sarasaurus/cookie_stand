@@ -2,6 +2,7 @@
 //global variables
 var hours = ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 var stores = [];
+// var table = ;
 
 //store object
 function Store (location, min, max, avgSales) {
@@ -51,10 +52,13 @@ function onSubmit(event) {//event is a predefined function!
     location: event.target.location.value,
     min: parseInt(event.target.min.value, 10),
     max: parseInt(event.target.max.value, 10),
-    avgCookie: parseInt(event.target.avgCookie.value, 10),
+    avgSales: parseInt(event.target.avgSales.value, 10),
   };
-  new Store (newStore.location, newStore.min, newStore.max, newStore.avgCookie);
-  Store.prototype.printNew();
+  var addStore = new Store (newStore.location, newStore.min, newStore.max, newStore.avgSales);
+  addStore.printStores();
+  addStore.printNew();
+  addStore.printTotal();
+
 }
 formEl.addEventListener('submit', onSubmit);
 
@@ -135,3 +139,5 @@ Store.prototype.printNew = function () {
   }
 
 };
+
+Store.prototype.printNew();
