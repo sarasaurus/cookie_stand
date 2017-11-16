@@ -37,14 +37,14 @@ Store.prototype.salesPerHour = function () {
   }
 };
 
-//FUNCTION CALLS
 //ESTABLISHED STORES
 new Store ('1st and Pike', 23, 65, 6.3);
 new Store ('SeaTac Airport', 3, 24, 1.2);
 new Store ('Seattle Center', 11, 38, 3.7);
 new Store ('Capitol Hill', 20, 38, 2.3);
 new Store ('Alki', 2, 16, 4.6);
-//INPUT FORM
+
+//NEW STORE FORM
 var formEl = document.getElementById('main-form');
 function onSubmit(event) {//event is a predefined function!
   event.preventDefault();//no lose data on refresh
@@ -57,6 +57,7 @@ function onSubmit(event) {//event is a predefined function!
   var addStore = new Store (newStore.location, newStore.min, newStore.max, newStore.avgSales);
   addStore.printStores();
   addStore.printNew();
+  addStore.printNewTotal();
 
 }
 formEl.addEventListener('submit', onSubmit);
@@ -138,6 +139,12 @@ Store.prototype.printNew = function () {
     addRow.appendChild(tdEl);
   }
 
+};
+Store.prototype.printNewTotal = function () {
+  var trEl = document.getElementsByTagName('tr')[stores.length - 1];
+  var tdEl = document.createElement('td');
+  tdEl.textContent = this.totalSales;
+  trEl.appendChild(tdEl);
 };
 
 //Store.prototype.printNew();
