@@ -52,7 +52,7 @@ function onSubmit(event) {//event is a predefined function!
     location: event.target.location.value,
     min: parseInt(event.target.min.value, 10),
     max: parseInt(event.target.max.value, 10),
-    avgSales: parseFloat(event.target.avgSales.value),
+    avgSales: parseInt(event.target.avgSales.value, 10),
   };
   var addStore = new Store (newStore.location, newStore.min, newStore.max, newStore.avgSales);
   addStore.printStores();
@@ -70,6 +70,7 @@ Store.prototype.printHours = function () {
   firstEl.textContent = ' ';
   lastEl.textContent = 'TOTAL';
   firstTblEl.appendChild(firstEl);
+
   for (var j = 0; j < hours.length; j++) {
     var tblEl = document.getElementById('tbl-body');
     var thEl = document.createElement('th');
