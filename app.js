@@ -22,7 +22,7 @@ var printRow = function (firstCell, data, lastCell) {
   }
   firstTblEl.appendChild(lastEl);
 };
-
+//OBJECTS
 //store object
 function Store (location, min, max, avgSales) {
   this.location = location;
@@ -34,14 +34,13 @@ function Store (location, min, max, avgSales) {
   stores.push(this);
   this.salesPerHour();
   console.log('what store: ', this);
-
 }
 //OBJECT METHODS
-//create daily Sales
+//create hourly Sales
 Store.prototype.dailySales = function () {
   return Math.round (this.avgSales * randNum(this.min, this.max));
 };
-//create hourly Sales
+//create Total Sales
 Store.prototype.salesPerHour = function () {
   for (var i = 0; i <= hours.length; i++) {
     this.hourlySales.push (this.dailySales());//pushing product to the array 'hourlySales'
