@@ -1,6 +1,6 @@
 'use strict';
 //global variables
-var hours = ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+var hours = ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 var stores = [];
 //GLOBAL METHODS
 var randNum = function (min, max) {
@@ -22,7 +22,38 @@ var printRow = function (firstCell, data, lastCell) {
   }
   firstTblEl.appendChild(lastEl);
 };
-
+var printArrRow = function (arrData, arrAccross, arrDown) {
+  var addRow = document.getElementsByTagName('tr')[arrAccross.length - 1];
+  for (var i = 0; i < arrDown.length; i++) {
+    var tdEl = document.createElement('td');
+    tdEl.textContent = arrData[i];
+    addRow.appendChild(tdEl);
+  }
+};
+//creates header row
+var printRow = function (firstCell, data, lastCell) {
+  var firstTblEl = document.getElementById('tbl-body');
+  var firstEl = document.createElement('th');
+  var lastEl = document.createElement('th');
+  firstEl.textContent = firstCell;
+  lastEl.textContent = lastCell;
+  firstTblEl.appendChild(firstEl);
+  for (var j = 0; j < data.length; j++) {
+    var tblEl = document.getElementById('tbl-body');
+    var thEl = document.createElement('th');
+    thEl.textContent = data[j];
+    tblEl.appendChild(thEl);
+  }
+  firstTblEl.appendChild(lastEl);
+};
+var printArrRow = function (arrData, arrAccross, arrDown) {
+  var addRow = document.getElementsByTagName('tr')[arrAccross.length - 1];
+  for (var i = 0; i < arrDown.length; i++) {
+    var tdEl = document.createElement('td');
+    tdEl.textContent = arrData[i];
+    addRow.appendChild(tdEl);
+  }
+};
 //store object
 function Store (location, min, max, avgSales) {
   this.location = location;
@@ -67,7 +98,6 @@ function onSubmit(event) {//event is a predefined function!
     avgSales: parseFloat(event.target.avgSales.value),
   };
   var addStore = new Store (newStore.location, newStore.min, newStore.max, newStore.avgSales);
-  //newStore PRINT TO PAGE CALLS
   addStore.printStores();
   addStore.printNew();
   addStore.printNewTotal();
@@ -76,12 +106,30 @@ function onSubmit(event) {//event is a predefined function!
 formEl.addEventListener('submit', onSubmit);
 
 //WRITE TO PAGE FUNCTIONS IN THEIR WRITE ORDER
+//creates heaeder row
+var printRow = function (firstCell, data, lastCell) {
+  var firstTblEl = document.getElementById('tbl-body');
+  var firstEl = document.createElement('th');
+  var lastEl = document.createElement('th');
+  firstEl.textContent = firstCell;
+  lastEl.textContent = lastCell;
+  firstTblEl.appendChild(firstEl);
+  for (var j = 0; j < data.length; j++) {
+    var tblEl = document.getElementById('tbl-body');
+    var thEl = document.createElement('th');
+    thEl.textContent = data[j];
+    tblEl.appendChild(thEl);
+  }
+  firstTblEl.appendChild(lastEl);
+};
 //creates vert header
 Store.prototype.printStores = function () {
   var tblEl = document.getElementById('tbl-body');
   var trEl = document.createElement('tr');
   trEl.textContent = this.location;
   tblEl.appendChild(trEl);
+  console.log('what stores we got: ', stores);
+  console.log('how many we got: ', stores.length);
 };
 //populates Data
 Store.prototype.printData = function () {
@@ -106,9 +154,12 @@ Store.prototype.printTotal = function () {
 //NEW STORE TO PAGE
 Store.prototype.printNew = function () {
   var addRow = document.getElementsByTagName('tr')[stores.length - 1];
+
+  console.log('where we on page:', stores.length - 1);
   for (var i = 0; i < hours.length; i++) {
     var tdEl = document.createElement('td');
     tdEl.textContent = this.hourlySales[i];
+    console.log('hourly sales: ', this.hourlySales[i]);
     addRow.appendChild(tdEl);
   }
 };
@@ -118,12 +169,23 @@ Store.prototype.printNewTotal = function () {
   tdEl.textContent = this.totalSales;
   trEl.appendChild(tdEl);
 };
-//established store PRINT TO PAGE CALLS
-printRow (' ', hours, 'TOTAL');
+//Get HOURLY TOTALS
+Store.prototype.hourlyTotals = function () {
+  var addRow = document.getElementsByTagName('tr')[stores.length];
+  for (var i = 0; i < hours.length; i++) {
+    //var trEl = document.getElementsByTagName('tr')[i + 1];
+    var tdElGetter = document.getElementsByTagName('td')[i + 1];
+    var tdEl = document.createElement('td');
+    var getTotal = parseInt(tdElGetter.textContent, 10);
+    tdEl.textContent = this.hourlySales[i];
+    addRow.appendChild(tdEl);
+  }
+};
+
+//PRINT TO PAGE CALLS
+printRow ('', hours, 'TOTAL');
 for (var j = 0; j < stores.length; j++) {
   stores[j].printStores();
 }
 Store.prototype.printData();
 Store.prototype.printTotal();
-
-///
