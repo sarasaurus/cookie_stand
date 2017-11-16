@@ -4,7 +4,8 @@
 
 }
 table {
-  width: 600px;
+  width: 700px;
+  margin: 40px auto;
 }
 th, td {
   padding: 7px 10px 10px 10px;
@@ -23,4 +24,7 @@ td.highlight {
 }
 tr {
   background-color: #efefef;
+}
+form {
+  margin: 0 auto;
 }
