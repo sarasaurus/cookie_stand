@@ -57,7 +57,6 @@ function onSubmit(event) {//event is a predefined function!
   var addStore = new Store (newStore.location, newStore.min, newStore.max, newStore.avgSales);
   addStore.printStores();
   addStore.printNew();
-  addStore.printTotal();
 
 }
 formEl.addEventListener('submit', onSubmit);
@@ -129,15 +128,16 @@ Store.prototype.printTotal();
 
 //NEW STORE TO PAGE
 Store.prototype.printNew = function () {
-  var position = document.getElementsByTagName('tr')[stores.length - 1];
+  var addRow = document.getElementsByTagName('tr')[stores.length - 1];
+
   console.log('where we on page:', stores.length - 1);
   for (var i = 0; i < hours.length; i++) {
     var tdEl = document.createElement('td');
     tdEl.textContent = this.hourlySales[i];
     console.log('hourly sales: ', this.hourlySales[i]);
-    position.appendChild(tdEl);
+    addRow.appendChild(tdEl);
   }
 
 };
 
-Store.prototype.printNew();
+//Store.prototype.printNew();
