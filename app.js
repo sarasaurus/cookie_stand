@@ -70,7 +70,6 @@ function onSubmit(event) {//event is a predefined function!
   new Store (newStore.location, newStore.min, newStore.max, newStore.avgCookie);
   table.innerHTML = '';
   printTable(' ', hours, 'TOTAL', 'th');
-  printRow('Hourly Totals', hours, 'TOTAL SALES ACCROSS STORES', 'td')
 }
 
 function prepareEventListener () {
@@ -78,12 +77,17 @@ function prepareEventListener () {
   formEl.addEventListener('submit', onSubmit);
 }
 
-//developement final total row:
-function calculateHourlyTotals (){
-  for (var i = 0; i < stores.length; i++) {
-    hourlyTotals.push (hourlyTotals[i] += Store.hourlySales[i]);
-  }
-}
+
+// //developement final total row:
+// function calculateTotalsPerHour () {
+//   for (var i = 0; i < stores.length; i++) {
+//
+//     console.log('this store', Store);
+//     console.log('Store.hourlySales', Store.hourlySales);
+//     console.log('hourlyTotals', hourlyTotals[i]);
+//     hourlyTotals.push (hourlyTotals[i] += Store.hourlySales[i]);
+//   }
+// }
 
 
 //EXECUTION_________________________________________________________________
@@ -91,7 +95,7 @@ function calculateHourlyTotals (){
 var hours = ['6am', '7am', '8am', '9am', '10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 var stores = [];
 var table = document.getElementById('tbl-body');
-var hourlyTotals = [];
+var hourlyTotals = [0];
 
 //ESTABLISHED STORES
 new Store ('1st and Pike', 23, 65, 6.3);
@@ -106,3 +110,5 @@ prepareEventListener ();
 //established store PRINT TO PAGE CALLS
 
 printTable (' ', hours, 'TOTAL', 'th');
+
+//calculateTotalsPerHour ();
