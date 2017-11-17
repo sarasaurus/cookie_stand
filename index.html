@@ -3,12 +3,16 @@
 
 <head>
   <title>Salmon Cookies</title>
-  <link rel="stylesheet" href="style.css"
-</head>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+</style>
+  </head>
 <body>
   <header>
-    <nav id=n "nav-left">
-      <ul id="top-menu">
+    <nav>
+      <ul class = "left">
         <li>
           Our Story
         </li>
@@ -19,9 +23,7 @@
           Our Stores
         </li>
       </ul>
-    </nav>
-    <nav id="nav-right">
-   <ul>
+   <ul class = "right">
      <li>
        Store Login
      </li>
@@ -29,14 +31,13 @@
        Style Guide
      </li>
     </ul>
-
- </nav>
 </nav>
-  </header>
+</header>
+<figure class ="banner">
+  <img src="assets/family.jpg" class = "large" alt ="smiling family">
+</figure>
   <main>
-    <figure id="banner">
-      <img src="assets/family.jpg" alt ="smiling family">
-    </figure>
+
 
 <article id="about">
   <h1>About Us</h1>
@@ -77,28 +78,31 @@
   </section>
 </article>
 <article id="products">
-  <figure id="product-img">
-    <img src="assets/shirt.jpg" alt ="shirt">
-  </figure>
   <section id = "product-info">
   <h3>Our Products</h3>
   <p>
+    <figure id="product-img">
+      <img src="assets/shirt.jpg" class = "medium" alt ="shirt">
+    </figure>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque nibh nec porttitor varius. Mauris condimentum ullamcorper eros vitae pellentesque. Donec congue quam nisl, quis fermentum massa efficitur at. Proin urna libero, hendrerit sed mi at, auctor maximus tellus. Quisque id
   </p>
   </section>
 </article>
-<figure id="sparkle">
-  <img src="assets/fishies.jpg" alt ="small fishes">
-</figure>
 <article id="contact">
-
+  <figure class ="banner">
+    <img src="assets/salmon.png" class = "float" alt ="smiling family">
+  </figure>
+  <figure id="sparkle">
+    <img src="assets/fishies.jpg" class = "medium" alt ="small fishes">
+  </figure>
+  <p>
+    What the fish are you waiting for?! Come on in, and row on down to one of our locations.
+  </p>
 <address>
-get at us
-jksda, wa, 982472
+1234 Salmon Row
+Fishy Town WA, 982472
 </address>
-
 </article>
-
 </main>
 <footer>
 all content copywrite Salmon Cookies LLC 2017
