@@ -13,6 +13,32 @@
   font-family: serif;
   font-size: 1vw;
 }
+/*fonts*/
+body {
+  font-family: 'Hind Vadodara', sans-serif;
+}
+a, ul, li {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: .2em;
+  font-style: italic;
+}
+h1, h2, h3, h4 {
+  font-family: 'Anton', sans-serif;
+}
+address {
+    font-family: 'Anton', sans-serif;
+}
+p {
+
+}
+#admin a {
+  font-style: normal;
+}
+/*fonts
+font-family: 'Pacifico', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Homemade Apple', cursive;
+*/
 /* BASE STYLES */
 head, script, link {
   display: none;
@@ -26,7 +52,12 @@ html, body {
   background-color: rgb(227, 236, 253);
   width:100%
 }
-
+img {
+  z-index: 1;
+}
+p, a, h1, h2, h3, h4, ul, li, address {
+  z-index: 10;
+}
 /* thead {
 background: black;
 color: white;
@@ -102,23 +133,31 @@ display: inline-block;
 width: calc(100% / 3);
 margin-left: calc((100% / 3) / 3);
 }
+
+/*-------------------------------text---------------------------*/
 p {
   padding: 2% 3%;
   display: inline-block;
   margin: 3% auto;
   line-height: 2vw;
   text-align: justify;
-}
-address {
-  width:40%;
-  font-size: 2vw;
-}
-/*--------------------------------Text------------------*/
-a {
-  color: black;
-  font-size: 2vw;
   }
-h1, h2, h3 {
+address {
+  float: right;
+  text-align: right;
+  margin: auto 5%;
+  font-size: 2vw;
+  width:50%;
+  font-style: normal;
+}
+p.contact {
+  float: right;
+  text-align: right;
+  font-size: 1.5vw;
+}
+/*------------------------------headers---------------------*/
+h1, h2, h3, h4 {
+  font-family: 'Anton', sans-serif;
   color: black;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -133,6 +172,15 @@ h3 {
   letter-spacing: 0.3em;
   border-bottom: 1px solid black;
 }
+h4 {
+  text-align: right;
+  padding: 2% 2%;
+  margin: 2% 5%;
+  letter-spacing: 0.3em;
+  width: 100%;
+  font-style: italic;
+  }
+/*---------------------------lists--------------------------*/
 ul {
   display: inline-block;
   margin: 0 auto;
@@ -157,18 +205,28 @@ ul.right {
   float: right;
   margin-top: 1%;
 }
-
+/*----------------------------------links---------------------*/
+a {
+  color: black;
+  font-size: 2vw;
+  }
   /*------------------------image styles--------------------*/
   img.large {
     width: 100%;
-  }
+      }
   img.medium {
     width: 300px;
     float: right;
       }
   img.left {
+    display: inline;
     float:left;
     width: 300px;
+  }
+  img.icon {
+    width: 100px;
+    float: right;
+    margin: auto 1%;
   }
   /*img.float {
     margin-top: 10%;

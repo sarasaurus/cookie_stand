@@ -4,28 +4,25 @@
 <head>
   <title>Salmon Cookies</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-  @import url('https://fonts.googleapis.com/css?family=Spectral+SC');
-  @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-</style>
+<link href="https://fonts.googleapis.com/css?family=Anton|Hind+Vadodara|Homemade+Apple|Pacifico" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
       <ul class = "left">
         <li id = "menu">
-          <a href = "about">Our Story</a>
+          <a href = "#about">Our Story</a>
         </li>
         <li id = "menu">
-          <a href = "locations">  Our Stores </a>
+          <a href = "#locations">  Our Stores </a>
         </li>
         <li id = "menu">
-          <a href = "products">  Our Products </a>
+          <a href = "#products">  Our Products </a>
         </li>
       </ul>
       <ul class = "right">
       <li id = "admin">
-        <a href = "sales.html">Store Login</a>
+        <a href = "sales.html"><img src ="assets/salmon.png" class="icon"></a>
       </li>
       <li id = "admin">
         <a href = "style_guide.html">Style Guide</a>
@@ -36,16 +33,16 @@
 <img src="assets/family.jpg" class = "large" alt ="smiling family">
   <article>
     <section class = "2column">
-      <h3>About Us</h3>
+      <h3 id="about">About Us</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque nibh nec porttitor varius. Mauris condimentum ullamcorper eros vitae pellentesque. Donec congue quam nisl, quis fermentum massa efficitur at. Proin urna libero, hendrerit sed mi at, auctor maximus
       </p>
     </section>
     <section class = "right">
-      <img src ="assets/shirt.jpg" class = "medium"/>
+      <img src ="assets/frosted-cookie.jpg" class = "medium"/>
     </section>
   </article>
-  <article id ="stores">
+  <article id ="locations">
     <section class = "twocolumn">
       <h3>LOCATION 1</h3>
       <p>
@@ -76,6 +73,9 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque nibh nec porttitor varius. Mauris condimentum ullamcorper eros vitae pellentesque. Donec congue quam nisl, quis fermentum massa efficitur at. Proin urna libero, hendrerit sed mi at, auctor maximus tellus. Quisque id
       </p>
     </section>
+    <section class = "twocolumn">
+      <img src = "assets/cutter.jpeg" class="medium" />
+    </section>
   </article>
   <article id="products">
     <section class = "left">
@@ -84,17 +84,17 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque nibh nec porttitor varius. Mauris condimentum ullamcorper eros vitae pellentesque. Donec congue quam nisl, quis fermentum massa efficitur at. Proin urna libero, hendrerit sed mi at, auctor maximus tellus. Quisque id
       </p>
     </section>
-    <section class = "left">
+    <section class = "right">
       <img src="assets/shirt.jpg" class = "medium" alt ="shirt">
     </section>
   </article>
-  <article id="contact">
+  <article class = "contact">
     <section class = "left">
       <img src="assets/fishies.jpg" class = "left" alt ="small fishes">
-    </section>
+  </section>
   <section class = "right">
-    <p>
-      What the fish are you waiting for?! Come on in, and row on down to one of our locations.
+    <h4>What the fish are you waiting for?!</h4>
+    <p class = "contact">Come on in, and row on down to one of our locations.
     </p>
     <address>
       1234 Salmon Row
