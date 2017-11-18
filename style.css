@@ -11,10 +11,8 @@
   border: none;
   outline: none;
   font-family: serif;
-  font-size: 2vw;
+  font-size: 1vw;
 }
-/*fonts*/
-
 /* BASE STYLES */
 head, script, link {
   display: none;
@@ -26,12 +24,12 @@ a {
 }
 html, body {
   background-color: rgb(227, 236, 253);
-
+  width:100%
 }
 
 /* thead {
-  background: black;
-  color: white;
+background: black;
+color: white;
 } */
 
 header, footer {
@@ -40,119 +38,155 @@ header, footer {
   background: rgba(69, 67, 69, .5);
   color: rgb(227, 236, 253);
   z-index:10;
-  }
- header {
-   position: absolute;
-   top: 0px;
-   height: 5%;
-   box-shadow: 0px 1px 1px rgba(69, 67, 69, .5);
-  }
-
+}
+header {
+  position: absolute;
+  top: 0px;
+  height: 8%;
+  box-shadow: 0px 1px 1px rgba(69, 67, 69, .5);
+}
 footer {
-   position: fixed;
-   bottom: 0px;
-   left:0px;
-   padding-top: 5px;
-   height:20px;
-   font-size: 10px;
-
-
- }
-
-main {
-  width: 100%;
-  margin: 0 auto;
-  }
-
+  position: fixed;
+  bottom: 0px;
+  left:0px;
+  padding-top: 5px;
+  height:20px;
+  font-size: 10px;
+}
 /* section for 2-columns */
 /* section {
-  display: inline-block;
-  width: calc(100% / 3);
-  margin: 5% 0;
-  margin-left: calc((100% / 3) / 3);
+display: inline-block;
+width: calc(100% / 3);
+margin: 5% 0;
+margin-left: calc((100% / 3) / 3);
 } */
-
 
 /* section for 3-colums */
 /* section {
-  display: inline-block;
-  width: calc(100% / 4);
-  margin: 5% 0;
-  margin-left: calc((100% / 4) / 4);
+display: inline-block;
+width: calc(100% / 4);
+margin: 5% 0;
+margin-left: calc((100% / 4) / 4);
 } */
+
 article {
-  display: inline-block;
-  margin: 5% 0;
-  background-color: rgba(69, 67, 69, .7);
-  color: rgb(227, 236, 253);
-  }
+  width:90%;
+  overflow: auto;
+  margin:20px auto;
+  display: block;
+  color:black;
+  border-bottom: 1px solid black;
+   }
 section {
-  display: inline-block;
-  width: calc(100%/6);
-  margin: 0px auto;
-  margin-left: calc((100%/6)/6);
+display: inline-block;
+width: 45%;
+margin: 5% auto;
 }
-
-
+.right {
+display: inline-block;
+float: right;
+width: 45%;
+}
+.left {
+display: inline-block;
+float: left;
+width: 45%;
+}
+.threecolumn {
+display: inline-block;
+width: calc(100% / 4);
+margin-left: calc((100% / 4) / 4);
+}
+.twocolumn {
+display: inline-block;
+width: calc(100% / 3);
+margin-left: calc((100% / 3) / 3);
+}
 p {
-  padding: 2%;
-}
-
-a {
-  font-size: 16px;
-  color: rgba(233, 215, 88, .9);
-  font-family: 'Amatic SC', cursive;
-}
-h1, h2, h3 {
-  color: rgb(227, 236, 253);
-  font-family: 'Amatic SC', cursive;
-  font-size: 4vw;
-
+  padding: 2% 3%;
+  display: inline-block;
+  margin: 3% auto;
+  line-height: 2vw;
+  text-align: justify;
 }
 address {
-
+  width:40%;
+  font-size: 2vw;
 }
-img.large {
-  width: 100%;
+/*--------------------------------Text------------------*/
+a {
+  color: black;
+  font-size: 2vw;
   }
-img.medium {
-  float: left;
-  width: 200px;
-  display: inline;
-  z-index: 10;
-}
-img.float {
-  margin-top: 10%;
-  position: absolute;
-  opacity: .5;
-  z-index: 1;
-}
+h1, h2, h3 {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 2vw;
 
+}
+h2 {
+  font-size: 3vw;
+}
+h3 {
+  margin-bottom: 2%;
+  letter-spacing: 0.3em;
+  border-bottom: 1px solid black;
+}
+ul {
+  display: inline-block;
+  margin: 0 auto;
+  }
 li {
   display: inline;
-  font-family: 'Amatic SC', cursive;
 }
-/*ul.left {
+nav li {
+  text-transform: uppercase;
+  margin-right: 7%;
+  letter-spacing: 0.2em;
+}
+ul.left {
   float:left;
+  text-align: left;
   width: 60%;
-    }*/
+  margin-top: .5%;
+}
 ul.right {
-  width: 20%;
+  text-align: right;
+  width: 40%;
   float: right;
+  margin-top: 1%;
 }
 
-#store-info {
+  /*------------------------image styles--------------------*/
+  img.large {
+    width: 100%;
+  }
+  img.medium {
+    width: 300px;
+    float: right;
+      }
+  img.left {
+    float:left;
+    width: 300px;
+  }
+  /*img.float {
+    margin-top: 10%;
+    position: absolute;
+    opacity: .5;
+      }*/
+  /*------------------------specific styles---------------*/
+  #store-info {
     background-color: rgba(233, 215, 88, .7);
-}
+  }
 
-#product-info
-{
-  margin: 5% 0;
-  width: 100%;
-  background-color: none;
-}
-#admin a {
-  font-family:'Amatic SC', cursive;
-  color: rgb(227, 236, 253);
-  font-size: 10px;
-}
+  #product-info
+  {
+    margin: 5% 0;
+    width: 100%;
+      }
+  #admin a {
+    color: rgb(227, 236, 253);
+    font-size: 10px;
+    margin-right: 2%;
+  }
