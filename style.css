@@ -10,23 +10,29 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: serif;
+  font-family:sans-serif;
   font-size: 1vw;
 }
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display SC', serif;
+*/
+
 /*fonts*/
 body {
-  font-family: 'Hind Vadodara', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
 }
 a, ul, li {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: .2em;
-  font-style: italic;
-}
+  }
 h1, h2, h3, h4 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
 }
 address {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 p {
 
@@ -49,7 +55,7 @@ a {
   display: inline;
 }
 html, body {
-  background-color: rgb(227, 236, 253);
+  background-color: rgba(200, 206, 209, 0.45);
   width:100%
 }
 img {
@@ -74,14 +80,10 @@ header {
   position: absolute;
   top: 0px;
   height: 8%;
-  box-shadow: 0px 1px 1px rgba(69, 67, 69, .5);
-}
+  color: #fdfdfc;
+  }
 footer {
-  position: fixed;
-  bottom: 0px;
-  left:0px;
-  padding-top: 5px;
-  height:20px;
+background: none;
   font-size: 10px;
 }
 /* section for 2-columns */
@@ -105,18 +107,18 @@ article {
   overflow: auto;
   margin:20px auto;
   display: block;
-  color:black;
-  border-bottom: 1px solid black;
-   }
+  background-color: #fdfdfc
+      }
 section {
 display: inline-block;
 width: 45%;
-margin: 5% auto;
+margin: 5% 2%;
 }
 .right {
 display: inline-block;
 float: right;
 width: 45%;
+margin-right: 3%;
 }
 .left {
 display: inline-block;
@@ -133,6 +135,10 @@ display: inline-block;
 width: calc(100% / 3);
 margin-left: calc((100% / 3) / 3);
 }
+.contact {
+  width:90%;
+
+}
 
 /*-------------------------------text---------------------------*/
 p {
@@ -143,29 +149,42 @@ p {
   text-align: justify;
   }
 address {
+  color:black;
   float: right;
   text-align: right;
   margin: auto 5%;
-  font-size: 2vw;
+  font-size: 1vw;
   width:50%;
   font-style: normal;
 }
 p.contact {
   float: right;
   text-align: right;
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
+p.footer {
+  text-align: center;
+  color: black;
+
+}
+a {
+  color: white;
+  font-size: 1vw;
+  }
+  a:hover {
+    font-weight: bold;
+    image-orientation: 6.4deg;
+  }
 /*------------------------------headers---------------------*/
 h1, h2, h3, h4 {
-  font-family: 'Anton', sans-serif;
   color: black;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 2vw;
+  font-size: 1vw;
 
 }
 h2 {
-  font-size: 3vw;
+  font-size: 2vw;
 }
 h3 {
   margin-bottom: 2%;
@@ -177,39 +196,41 @@ h4 {
   padding: 2% 2%;
   margin: 2% 5%;
   letter-spacing: 0.3em;
-  width: 100%;
-  font-style: italic;
+  width: 90%;
+
+  font-size: 3vw;
   }
 /*---------------------------lists--------------------------*/
 ul {
   display: inline-block;
   margin: 0 auto;
-  }
+    }
 li {
   display: inline;
 }
 nav li {
+  padding-top: 2%;
   text-transform: uppercase;
   margin-right: 7%;
   letter-spacing: 0.2em;
 }
 ul.left {
+  postion: absolute;
   float:left;
+  display: inline;
   text-align: left;
   width: 60%;
   margin-top: .5%;
 }
 ul.right {
+  display: inline;
   text-align: right;
-  width: 40%;
+  width: 30%;
   float: right;
-  margin-top: 1%;
+  margin-top: .5%;
 }
 /*----------------------------------links---------------------*/
-a {
-  color: black;
-  font-size: 2vw;
-  }
+
   /*------------------------image styles--------------------*/
   img.large {
     width: 100%;
@@ -217,17 +238,27 @@ a {
   img.medium {
     width: 300px;
     float: right;
-      }
+    border: 15px solid white;
+    box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.38);
+          }
   img.left {
     display: inline;
     float:left;
-    width: 300px;
+    border: 15px solid white;
+    box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.38);
+    width: 700px;
   }
   img.icon {
     width: 100px;
     float: right;
     margin: auto 1%;
   }
+  img.footer {
+    display: inline-block;
+    width:100px;
+    margin: 0px auto;
+
+    }
   /*img.float {
     margin-top: 10%;
     position: absolute;
@@ -247,4 +278,8 @@ a {
     color: rgb(227, 236, 253);
     font-size: 10px;
     margin-right: 2%;
+    padding: 0px;
+  }
+  img.icon:hover {
+
   }
