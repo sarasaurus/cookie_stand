@@ -177,13 +177,15 @@ ul.right {
       }*/
   /*------------------------specific styles---------------*/
 
-  #admin a {
+  #admin a{
     color: rgb(227, 236, 253);
-    font-size: 10px;
+    font-size: .6vw;
     margin-right: 2%;
     padding: 0px;
-  }
-
+    }
+  a:hover {
+    font-weight: bold;
+    }
 /*----------------------table------------------------*/
 table {
   width: 700px;
