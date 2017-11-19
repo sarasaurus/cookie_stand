@@ -10,11 +10,42 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: serif;
-  font-size: 2vw;
+  font-family:sans-serif;
+  font-size: 1vw;
 }
-/*fonts*/
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display SC', serif;
+*/
 
+/*fonts*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+}
+a, ul, li {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .2em;
+  }
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(69, 67, 69, .5);
+}
+address {
+    font-family: 'Montserrat', sans-serif;
+    rgba(69, 67, 69, .5);
+}
+p {
+color:rgb(90, 95, 100);
+}
+#admin a {
+  font-style: normal;
+}
+/*fonts
+font-family: 'Pacifico', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Homemade Apple', cursive;
+*/
 /* BASE STYLES */
 head, script, link {
   display: none;
@@ -25,13 +56,18 @@ a {
   display: inline;
 }
 html, body {
-  background-color: rgb(227, 236, 253);
-
+  background-color: rgba(200, 206, 209, 0.45);
+  width:100%
 }
-
+img {
+  z-index: 1;
+}
+p, a, h1, h2, h3, h4, ul, li, address {
+  z-index: 10;
+}
 /* thead {
-  background: black;
-  color: white;
+background: black;
+color: white;
 } */
 
 header, footer {
@@ -40,119 +76,310 @@ header, footer {
   background: rgba(69, 67, 69, .5);
   color: rgb(227, 236, 253);
   z-index:10;
+}
+header {
+  position: absolute;
+  top: 0px;
+  height: 8%;
+  color: #fdfdfc;
   }
- header {
-   position: absolute;
-   top: 0px;
-   height: 5%;
-   box-shadow: 0px 1px 1px rgba(69, 67, 69, .5);
-  }
-
 footer {
-   position: fixed;
-   bottom: 0px;
-   left:0px;
-   padding-top: 5px;
-   height:20px;
-   font-size: 10px;
-
-
- }
-
-main {
-  width: 100%;
-  margin: 0 auto;
-  }
-
+background: none;
+  font-size: 10px;
+}
 /* section for 2-columns */
 /* section {
-  display: inline-block;
-  width: calc(100% / 3);
-  margin: 5% 0;
-  margin-left: calc((100% / 3) / 3);
+display: inline-block;
+width: calc(100% / 3);
+margin: 5% 0;
+margin-left: calc((100% / 3) / 3);
 } */
-
 
 /* section for 3-colums */
 /* section {
-  display: inline-block;
-  width: calc(100% / 4);
-  margin: 5% 0;
-  margin-left: calc((100% / 4) / 4);
+display: inline-block;
+width: calc(100% / 4);
+margin: 5% 0;
+margin-left: calc((100% / 4) / 4);
 } */
+
 article {
-  display: inline-block;
-  margin: 5% 0;
-  background-color: rgba(69, 67, 69, .7);
-  color: rgb(227, 236, 253);
-  }
+  width:90%;
+  overflow: auto;
+  margin:20px auto;
+  display: block;
+  background-color: #fdfdfc;
+      }
 section {
-  display: inline-block;
-  width: calc(100%/6);
-  margin: 0px auto;
-  margin-left: calc((100%/6)/6);
+display: inline-block;
+width: 45%;
+margin: 5% 2%;
+}
+.right {
+display: inline-block;
+float: right;
+width: 45%;
+margin-right: 3%;
+}
+.left {
+display: inline-block;
+float: left;
+width: 45%;
+}
+.threecolumn {
+display: inline-block;
+width: calc(100% / 4);
+margin-left: calc((100% / 4) / 4);
+}
+.twocolumn {
+display: inline-block;
+width: calc(100% / 3);
+margin-left: calc((100% / 3) / 3);
+}
+.contact {
+  width:90%;
+
 }
 
-
+/*-------------------------------text---------------------------*/
 p {
-  padding: 2%;
+  padding: 2% 3%;
+  display: inline-block;
+  margin: 3% auto;
+  line-height: 2vw;
+  text-align: justify;
+  }
+address {
+  float: right;
+  text-align: right;
+  margin: auto 5%;
+  font-size: 1vw;
+  width:50%;
+  font-style: normal;
 }
+p.contact {
+  float: right;
+  text-align: right;
+  font-size: 2vw;
+}
+p.footer {
+  text-align: center;
+  color:rgb(90, 95, 100);
 
-a {
-  font-size: 16px;
-  color: rgba(233, 215, 88, .9);
-  font-family: 'Amatic SC', cursive;
 }
-h1, h2, h3 {
-  color: rgb(227, 236, 253);
-  font-family: 'Amatic SC', cursive;
+a {
+  color: white;
+  font-size: 1vw;
+  }
+  a:hover {
+    font-weight: bold;
+    image-orientation: 6.4deg;
+  }
+/*------------------------------headers---------------------*/
+h1, h2, h3, h4 {
+  color: hsla(231, 5%, 20%, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   font-size: 4vw;
 
 }
-address {
-
+h2 {
+  font-size: 2vw;
 }
-img.large {
-  width: 100%;
-  }
-img.medium {
-  float: left;
-  width: 200px;
-  display: inline;
-  z-index: 10;
+h3 {
+  margin-bottom: 2%;
+  letter-spacing: 0.3em;
+  border-bottom: 4px solid  rgba(233, 215, 88, .7);
+  font-size: 3vw;
 }
-img.float {
-  margin-top: 10%;
-  position: absolute;
-  opacity: .5;
-  z-index: 1;
+h4 {
+  text-align: right;
+  padding: 2% 2%;
+  margin: 2% 5%;
+  letter-spacing: 0.3em;
+  width: 90%;
+  font-size: 3vw;
 }
-
+#yellow {
+   color: rgba(233, 215, 88, .7);
+}
+#lightblue {
+  color:rgb(227, 236, 253);
+}
+/*---------------------------lists--------------------------*/
+ul {
+  display: inline-block;
+  margin: 0 auto;
+    }
 li {
   display: inline;
-  font-family: 'Amatic SC', cursive;
 }
-/*ul.left {
+nav li {
+  padding-top: 2%;
+  text-transform: uppercase;
+  margin-right: 7%;
+  letter-spacing: 0.2em;
+}
+ul.left {
+  postion: absolute;
   float:left;
+  display: inline;
+  text-align: left;
   width: 60%;
-    }*/
+  margin-top: .5%;
+}
 ul.right {
-  width: 20%;
+  display: inline;
+  text-align: right;
+  width: 30%;
   float: right;
+  margin-top: .5%;
 }
+/*----------------------------------links---------------------*/
 
-#store-info {
+  /*------------------------image styles--------------------*/
+  img.large {
+    width: 100%;
+      }
+  img.medium {
+    width: 300px;
+    float: right;
+    border: 15px solid white;
+    box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.38);
+          }
+  img.left {
+    display: inline;
+    float:left;
+    border: 15px solid white;
+    box-shadow: 5px 5px 5px 0px rgba(150, 150, 150, 0.38);
+    width: 700px;
+  }
+  img.icon {
+    width: 100px;
+    float: right;
+    margin: auto 1%;
+  }
+  img.footer {
+    display: inline-block;
+    width:100px;
+    margin: 0px auto;
+    }
+  img.icon:hover {
+    }
+  /*img.float {
+    margin-top: 10%;
+    position: absolute;
+    opacity: .5;
+      }*/
+  /*------------------------specific styles---------------*/
+  #store-info {
     background-color: rgba(233, 215, 88, .7);
-}
+  }
 
-#product-info
-{
-  margin: 5% 0;
-  width: 100%;
-  background-color: none;
+  #product-info
+  {
+    margin: 5% 0;
+    width: 100%;
+      }
+  #admin a{
+    color: rgb(227, 236, 253);
+    font-size: .6vw;
+    margin-right: 2%;
+    padding: 0px;
+    }
+  #styletest {
+    display: inline-block;
+    width: 90%;
+    padding: 5%;
+    background-color: white;
+     z-index: 2;
+  }
+
+#bg {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: #fdfdfc;
+  z-index: 10;
 }
-#admin a {
-  font-family:'Amatic SC', cursive;
+#header {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: rgba(69, 67, 69, .5);
+}
+#adminlink {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: rgb(227, 236, 253);
+}
+#ptext {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color:rgb(90, 95, 100);
+}
+#headtext {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+#mainbg {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: #d8dcde;
+}
+#accent1 {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: rgba(233, 215, 88, .7);
+}
+#accent2 {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: rgb(144, 155, 160);
+}
+#logocolor {
+  display: inline-block;
+  height:70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 100%;
+  background-color: hsla(231, 5%, 20%, 1);
+}
+/*-------------------colors--------------------*/
+/*colors*/
+#yellow {
+   color: rgba(233, 215, 88, .7);
+}
+#lightblue {
+  color:rgb(227, 236, 253);
+}
+#headercolor {
+background-color:  rgba(69, 67, 69, .5);
+}
+#admincolor {
   color: rgb(227, 236, 253);
-  font-size: 10px;
+
 }
